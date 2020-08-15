@@ -6,7 +6,7 @@
 
 # Demo
 
-https://webebuys.com
+https://webebuy.com
 
 # Getting Started
 
@@ -37,7 +37,7 @@ window._translate_instance.toLanguage('zh-cn')
 
 - IE < 11 not support
 - The max translate text length is 1900
-- We use google api, you may not use in china, you can try https://webebuys.com
+- We use google api, you can not use it in china, try https://webebuy.com
 
 # Support Languages
 
