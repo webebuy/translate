@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>起步</title>
+  </head>
+  <body>
+    <div class="table">
+      <h2>
+        <svg
+          data-v-116a7300=""
+          t="1582268929608"
+          viewBox="0 0 1024 1024"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          p-id="5581"
+          width="36"
+          height="36"
+          class="icon"
+        >
+          <path
+            data-v-116a7300=""
+            d="M512 0C229.233778 0 0 229.233778 0 512s229.233778 512 512 512 512-229.233778 512-512S794.766222 0 512 0z m0 113.777778c158.72 0 295.424 93.127111 359.395556 227.555555H796.444444l-113.777777 284.444445-113.777778-284.444445h-113.777778l-113.777778 284.444445-113.777777-284.444445H152.604444C216.576 206.904889 353.223111 113.777778 512 113.777778z m0 796.444444c-219.932444 0-398.222222-178.289778-398.222222-398.222222 0-43.349333 7.139556-84.992 19.968-124.074667L284.444444 739.555556h113.777778l113.777778-284.444445 113.777778 284.444445h113.777778l150.698666-351.630223c12.8 39.082667 19.968 80.725333 19.968 124.074667 0 219.932444-178.346667 398.222222-398.222222 398.222222z"
+            p-id="5582"
+            fill="#38ceea"
+          ></path>
+        </svg>
+        动态文字自动翻译
+      </h2>
+      <div class="link-note">
+        如google服务不可用，或想了解更多，请访问:
+        <a href="https://webebuy.com">https://webebuy.com</a>
+      </div>
+      <div>
+        <select id="languageSelect" onchange="languageChange(this)"></select>
+      </div>
+
+      <table>
+        <tr>
+          <td>请输入任意语言文本</td>
+          <td></td>
+          <td>自动翻译的文字</td>
+        </tr>
+        <tr>
+          <td class="white">
+            <div
+              id="contentEditable"
+              oninput="textChange(this)"
+              contenteditable="true"
+            >
+              <h3 id="test">翻译文本</h3>
+              <p>少即是多</p>
+            </div>
+          </td>
+          <td>
+            <svg
+              t="1597502612283"
+              class="icon"
+              viewBox="0 0 1128 1024"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              p-id="2767"
+              width="25"
+              height="25"
+            >
+              <path
+                d="M230.941447 409.675993L0.569944 204.875993 230.941447 0v153.656994h895.914508v102.4H230.941447v153.618999z m666.644898 204.724007l230.371503 204.8-230.371503 204.8V870.418998H1.671837v-102.4h895.762523v-153.618998z"
+                p-id="2768"
+                fill="#445383"
+              ></path>
+            </svg>
+          </td>
+          <td>
+            <div id="dynamicText">
+              <h3 id="test">翻译文本</h3>
+              <p>少即是多</p>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <script>
+      var language = window._translate_instance
+      function init() {
+        var supportLanguages = {
+          af: 'Afrikaans',
+          sq: 'Albanian',
+          am: 'Amharic',
+          ar: 'Arabic',
+          hy: 'Armenian',
+          az: 'Azerbaijani',
+          eu: 'Basque',
+          be: 'Belarusian',
+          bn: 'Bengali',
+          bs: 'Bosnian',
+          bg: 'Bulgarian',
+          ca: 'Catalan',
+          ceb: 'Cebuano',
+          ny: 'Chichewa',
+          'zh-cn': 'Chinese Simplified',
+          'zh-tw': 'Chinese Traditional',
+          co: 'Corsican',
+          hr: 'Croatian',
+          cs: 'Czech',
+          da: 'Danish',
+          nl: 'Dutch',
+          en: 'English',
+          eo: 'Esperanto',
+          et: 'Estonian',
+          tl: 'Filipino',
+          fi: 'Finnish',
+          fr: 'French',
+          fy: 'Frisian',
+          gl: 'Galician',
+          ka: 'Georgian',
+          de: 'German',
+          el: 'Greek',
+          gu: 'Gujarati',
+          ht: 'Haitian Creole',
+          ha: 'Hausa',
+          haw: 'Hawaiian',
+          iw: 'Hebrew',
+          hi: 'Hindi',
+          hmn: 'Hmong',
+          hu: 'Hungarian',
+          is: 'Icelandic',
+          ig: 'Igbo',
+          id: 'Indonesian',
+          ga: 'Irish',
+          it: 'Italian',
+          ja: 'Japanese',
+          jw: 'Javanese',
+          kn: 'Kannada',
+          kk: 'Kazakh',
+          km: 'Khmer',
+          ko: 'Korean',
+          ku: 'Kurdish (Kurmanji)',
+          ky: 'Kyrgyz',
+          lo: 'Lao',
+          la: 'Latin',
+          lv: 'Latvian',
+          lt: 'Lithuanian',
+          lb: 'Luxembourgish',
+          mk: 'Macedonian',
+          mg: 'Malagasy',
+          ms: 'Malay',
+          ml: 'Malayalam',
+          mt: 'Maltese',
+          mi: 'Maori',
+          mr: 'Marathi',
+          mn: 'Mongolian',
+          my: 'Myanmar (Burmese)',
+          ne: 'Nepali',
+          no: 'Norwegian',
+          ps: 'Pashto',
+          fa: 'Persian',
+          pl: 'Polish',
+          pt: 'Portuguese',
+          ma: 'Punjabi',
+          ro: 'Romanian',
+          ru: 'Russian',
+          sm: 'Samoan',
+          gd: 'Scots Gaelic',
+          sr: 'Serbian',
+          st: 'Sesotho',
+          sn: 'Shona',
+          sd: 'Sindhi',
+          si: 'Sinhala',
+          sk: 'Slovak',
+          sl: 'Slovenian',
+          so: 'Somali',
+          es: 'Spanish',
+          su: 'Sundanese',
+          sw: 'Swahili',
+          sv: 'Swedish',
+          tg: 'Tajik',
+          ta: 'Tamil',
+          te: 'Telugu',
+          th: 'Thai',
+          tr: 'Turkish',
+          uk: 'Ukrainian',
+          ur: 'Urdu',
+          uz: 'Uzbek',
+          vi: 'Vietnamese',
+          cy: 'Welsh',
+          xh: 'Xhosa',
+          yi: 'Yiddish',
+          yo: 'Yoruba',
+          zu: 'Zulu'
+        }
+        var select = document.getElementById('languageSelect')
+        for (var l in supportLanguages) {
+          var opt = document.createElement('option')
+          opt.value = l
+          opt.innerText = supportLanguages[l]
+          select.options.add(opt)
+        }
+
+        language.config({
+          sourceLanguage: '',
+          translateMode: 1,
+          googleKey: 'AIzaSyCzCftG9k7PPxEQvP5HMBiGt2n-qr5xZ1Y'
+        })
+
+        select.value = 'en'
+        language.toLanguage('en')
+
+        document.getElementById('contentEditable').focus()
+      }
+
+      init()
+
+      function languageChange(s) {
+        language.toLanguage(s.value)
+      }
+      function textChange(s) {
+        document.getElementById('dynamicText').innerHTML = s.innerHTML
+      }
+    </script>
+
+    <style>
+      body {
+        text-align: center;
+        padding-top: 40px;
+        color: #445383;
+        font-family: 'Lato', Helvetica, Arial, sans-serif !important;
+      }
+      .table {
+        width: 880px;
+        display: inline-block;
+      }
+      .table > h2 {
+        text-transform: uppercase;
+        margin-bottom: 30px;
+      }
+      table {
+        border-radius: 4px;
+      }
+      td.white {
+        background-color: white;
+      }
+      td > div {
+        border: 1px solid #44538355;
+        min-height: 360px;
+        width: 400px;
+        text-align: left;
+        padding: 5px;
+        border-radius: 4px;
+        text-transform: none;
+      }
+
+      select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #44538355;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        color: #445383;
+      }
+
+      svg {
+        margin-bottom: -8px;
+        margin-right: 10px;
+        margin-left: 10px;
+      }
+      .link-note {
+        margin-bottom: 30px;
+      }
+      .link-note a {
+        text-decoration: none;
+        display: inline-block;
+        margin-left: 10px;
+        padding: 5px 10px;
+        background-color: #445383;
+        color: white;
+        border-radius: 3px;
+      }
+    </style>
+  </body>
+</html>
