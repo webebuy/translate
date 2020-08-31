@@ -11,7 +11,7 @@
 Can not used in china :
 https://webebuy.gitee.io/translate/
 
-Can userd in china :
+Can used in china :
 https://webebuy.com
 
 # Getting Started
