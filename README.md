@@ -1,4 +1,4 @@
-# [中文文档](readme.cn.md)
+# [中文文档](README.cn.md)
 
 # Description
 
