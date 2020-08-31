@@ -1,25 +1,25 @@
-# [中文文档](readme.cn.md)
+# [英文文档](readme.md)
 
-# Description
+# 说明
 
-- Automatic translation of web pages.
-- Any text can be translate when the text is changed.
-- We use google translation api.
+- 自动翻译您的网页
+- 当您的网页文字动态变化时，翻译也将自动执行
+- 使用 google 翻译 API
 
-# Demo
+# 演示
 
 https://webebuy.com
 
-# Getting Started
+# 起步
 
-## 1. Add script link
+## 1. 添加脚本链接
 
 ```
 <script src="https://apis.google.com/js/api.js"></script>
 <script src="./dist/translate.min.js"></script>
 ```
 
-## 2. Config
+## 2. 配置
 
 ```
 window._translate_instance.config({
@@ -29,19 +29,19 @@ window._translate_instance.config({
         })
 ```
 
-## 3. Switch languages
+## 3. 切换语言
 
 ```
 window._translate_instance.toLanguage('zh-cn')
 ```
 
-# Know Issures
+# 已知问题
 
-- IE < 11 not support
-- The max translate text length is 1900
-- We use google api, you can not use it in china, try https://webebuy.com
+- 不支持 IE < 11
+- 单个语句支持最长 1900 个字符
+- 因为使用了 google 翻译服务, 国内不能直接使用，需要翻墙, 不翻墙试试 https://webebuy.com
 
-# Support Languages
+# 支持的语言
 
 - af: Afrikaans
 - sq: Albanian
